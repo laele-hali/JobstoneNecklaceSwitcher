@@ -2,7 +2,7 @@
 
 > **Note:** This is my first attempt at making a mod/plugin — feedback is welcome!
 
-Automatically switches the **Jobstones Necklaces** pendant to match your **current job** whenever your job (or soul crystal) changes. No manual toggling required.
+Automatically switches the **Jobstones Necklaces** pendant to match your **current job** whenever your job (or soul crystal) changes. No manual toggling required — unless you want it to.
 
 > **Requires:**
 > - [Penumbra](https://github.com/xivdev/Penumbra)
@@ -13,6 +13,7 @@ If you love the Jobstones Necklaces mod but forget to change the pendant when yo
 
 ## Features
 - Detects job/gear changes and updates the pendant automatically
+- **Optional “Keep Current Stone After Changing Class” toggle** to prevent automatic changes
 - Per‑job mapping to the mod’s option names
 - Optional glow toggle (if exposed by the mod)
 - Choose which Penumbra collection to modify (Default or Character)
@@ -28,7 +29,8 @@ If you love the Jobstones Necklaces mod but forget to change the pendant when yo
 1. Set **Target Collection** to the Penumbra collection where Jobstones Necklaces is active.
 2. Confirm the **Option Group** and **Option Names** match your mod (e.g., group `Pendant`, option `PLD`, `VPR`, etc.).
 3. Toggle **Glow** if desired.
-4. Swap jobs to verify the pendant updates.
+4. **Enable “Keep Current Stone After Changing Class”** if you don’t want the plugin to change your pendant when you swap jobs.
+5. Swap jobs to verify the pendant updates (or stays the same, if you enabled the above).
 
 ## Compatibility & limitations
 - Works with all races/genders supported by the underlying mod.
