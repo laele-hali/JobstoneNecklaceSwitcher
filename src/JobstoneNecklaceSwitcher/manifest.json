@@ -1,0 +1,12 @@
+{
+  "Name": "Jobstone Necklace Auto-Switcher",
+  "Author": "Laele",
+  "Punchline": "Auto-selects the Jobstones Necklaces pendant for your current job.",
+  "Description": "Detects job/soul crystal changes and toggles the Jobstones Necklaces Penumbra mod option accordingly. Requires the Jobstones Necklaces mod and Penumbra.",
+  "RepoUrl": "https://github.com/laele-hali/JobstoneNecklaceSwitcher",
+  "Tags": ["penumbra", "necklace", "jobstone", "dalamud"],
+  "InternalName": "JobstoneNecklaceSwitcher",
+  "AssemblyVersion": "0.1.0",
+  "DalamudApiLevel": 13,
+  "LoadPriority": 0
+}
