@@ -1,0 +1,28 @@
+{
+  "Group": "Textures",
+  "EnableGlowDefault": true,
+  "Jobs": {
+    "PLD": "PLD - Paladin (Glow)",
+    "WAR": "WAR - Warrior (Glow)",
+    "DRK": "DRK - Dark Knight (Glow)",
+    "GNB": "GNB - Gunbreaker (Glow)",
+    "WHM": "WHM - White Mage (Glow)",
+    "SCH": "SCH - Scholar (Glow)",
+    "AST": "AST - Astrologian (Glow)",
+    "SGE": "SGE - Sage (Glow)",
+    "MNK": "MNK - Monk (Glow)",
+    "DRG": "DRG - Dragoon (Glow)",
+    "NIN": "NIN - Ninja (Glow)",
+    "SAM": "SAM - Samurai (Glow)",
+    "RPR": "RPR - Reaper (Glow)",
+    "VPR": "VPR - Viper (Glow)",
+    "BRD": "BRD - Bard (Glow)",
+    "MCH": "MCH - Machinist (Glow)",
+    "DNC": "DNC - Dancer (Glow)",
+    "BLM": "BLM - Black Mage (Glow)",
+    "SMN": "SMN - Summoner (Glow)",
+    "RDM": "RDM - Red Mage (Glow)",
+    "PCT": "PIC - Pictomancer (Glow)",
+    "BLU": "BLU - Blue Mage (Glow)"
+  }
+}

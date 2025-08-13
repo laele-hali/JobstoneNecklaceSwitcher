@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Dalamud.NET.Sdk" Version="13.0.0" />
+
+  <PropertyGroup>
+    <AssemblyName>JobstoneNecklaceSwitcher</AssemblyName>
+    <RootNamespace>JobstoneNecklaceSwitcher</RootNamespace>
+    <Version>0.1.0</Version>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64</Platforms>
+
+    <!-- Use packager as normal -->
+    <DalamudPackage>true</DalamudPackage>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ImGui.NET" Version="1.91.6.1" />
+  </ItemGroup>
+
+  <!-- Ship the template manifest + default mappings in package/output -->
+  <ItemGroup>
+    <None Include="JobstoneNecklaceSwitcher.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="DefaultMappings.json" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <!-- Also embed defaults so code can seed config on first run -->
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultMappings.json">
+      <LogicalName>JobstoneNecklaceSwitcher.DefaultMappings.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="Build">
+    <PropertyGroup>
+      <PluginDir>$(HOME)/.xlcore/devPlugins/JobstoneNecklaceSwitcher</PluginDir>
+    </PropertyGroup>
+    <Exec Command="echo [PostBuild] Deploying to $(PluginDir)" />
+    <Exec Command="rm -rf $(PluginDir) &amp;&amp; mkdir -p $(PluginDir)" />
+    <Exec Command="cp $(OutputPath)JobstoneNecklaceSwitcher.dll $(PluginDir)" />
+    <Exec Command="cp $(OutputPath)JobstoneNecklaceSwitcher.json $(PluginDir) || true" />
+    <Exec Command="cp $(OutputPath)ImGui.NET.dll $(PluginDir) || true" />
+    <Exec Command="cp $(ProjectDir)DefaultMappings.json $(PluginDir) || true" />
+    <Exec Command="echo [PostBuild] Copy complete ✅" />
+  </Target>
+</Project>
